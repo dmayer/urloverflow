@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6523AAB318897FA300A25F7C /* Shmoo_Eyes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6523AAB218897FA300A25F7C /* Shmoo_Eyes.jpg */; };
 		65C16D2018897CFF0092872B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C16D1F18897CFF0092872B /* Foundation.framework */; };
 		65C16D2218897CFF0092872B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C16D2118897CFF0092872B /* CoreGraphics.framework */; };
 		65C16D2418897CFF0092872B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C16D2318897CFF0092872B /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6523AAB218897FA300A25F7C /* Shmoo_Eyes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Shmoo_Eyes.jpg; path = ../../../../../Downloads/Shmoo_Eyes.jpg; sourceTree = "<group>"; };
 		65C16D1C18897CFF0092872B /* urloverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = urloverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C16D1F18897CFF0092872B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65C16D2118897CFF0092872B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -129,6 +131,7 @@
 		65C16D2618897CFF0092872B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6523AAB218897FA300A25F7C /* Shmoo_Eyes.jpg */,
 				65C16D2718897CFF0092872B /* urloverflow-Info.plist */,
 				65C16D2818897CFF0092872B /* InfoPlist.strings */,
 				65C16D2B18897CFF0092872B /* main.m */,
@@ -233,6 +236,7 @@
 			files = (
 				65C16D3618897CFF0092872B /* Main_iPad.storyboard in Resources */,
 				65C16D3B18897CFF0092872B /* Images.xcassets in Resources */,
+				6523AAB318897FA300A25F7C /* Shmoo_Eyes.jpg in Resources */,
 				65C16D3318897CFF0092872B /* Main_iPhone.storyboard in Resources */,
 				65C16D2A18897CFF0092872B /* InfoPlist.strings in Resources */,
 			);
@@ -390,11 +394,18 @@
 		65C16D5218897CFF0092872B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_INCLUDING_64_BIT)",
+					armv6,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "urloverflow/urloverflow-Prefix.pch";
 				INFOPLIST_FILE = "urloverflow/urloverflow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -403,11 +414,18 @@
 		65C16D5318897CFF0092872B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_INCLUDING_64_BIT)",
+					armv6,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "urloverflow/urloverflow-Prefix.pch";
 				INFOPLIST_FILE = "urloverflow/urloverflow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -474,6 +492,7 @@
 				65C16D5318897CFF0092872B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65C16D5418897CFF0092872B /* Build configuration list for PBXNativeTarget "urloverflowTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +501,7 @@
 				65C16D5618897CFF0092872B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

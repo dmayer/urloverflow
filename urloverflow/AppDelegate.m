@@ -42,5 +42,14 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    if( [[url host] length] != 0)
+    {
+        char* buffer = (char*) malloc(15*sizeof(char));
+        strcpy(buffer, [[url host] UTF8String]);
+    }
+    return YES;    
+}
+
 
 @end
